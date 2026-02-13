@@ -4,10 +4,13 @@
   "description": "Microsoft Fabric - Frontend Developer Sample App",
   "main": "index.js",
   "scripts": {
-    "start": "node validation/generate-nuspec.js && node validation/build-nuget.js && env-cmd -f .env.dev webpack serve --open --config ./tools/webpack.config.js",
-    "build:test": "env-cmd -f .env.test webpack --config ./tools/webpack.config.js",
+    "start": "node validation/generate-nuspec.js && node validation/build-nuget.js && env-cmd -f .env.dev webpack serve --open --config ./tools/webpack.config.js", 
+    "build": "npm run build:prod", "build:test": "env-cmd -f .env.test webpack --config ./tools/webpack.config.js", 
     "build:prod": "env-cmd -f .env.prod webpack --config ./tools/webpack.config.js"
   },
+"engines": {
+  "node": "20"
+},
   "author": "",
   "license": "ISC",
   "dependencies": {
